@@ -3,6 +3,7 @@ import MenuTiles from './menutiles';
 import { getData } from './getdata';
 import { Menu } from './menu'
 import { useState } from 'react';
+import Footer from './footer';
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Header />
         <MenuTiles page={page} setPage={setPage} />
         <Menu page={page} setPage={setPage}/>
+        <Footer />
         </>
     )
 }
