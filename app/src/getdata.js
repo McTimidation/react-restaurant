@@ -13,22 +13,23 @@ const pages = {
 async function getData() {
     await axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
         .then((data) => {
-            console.log(data.data[0].category.title)
-        //     data.data.forEach((data) => {
-        //     switch (data.category.title) {
-        //         case "Appetizer":
-        //             pages.apps.push(data)
-        //             break;
-        //         case "Dinner":
-        //             pages.entrees.push(data)
-        //             break;
-        //         case "Dessert":
-        //             pages.desserts.push(data)
-        //             break;
-        //     }
-        // })
+            // console.log(data.data[0].category.title)
+            data.data.forEach(data => {
+            switch (data.category.title) {
+                case "Appetizer":
+                    pages.apps.push(data)
+                    break;
+                case "Dinner":
+                    pages.entrees.push(data)
+                    break;
+                case "Dessert":
+                    pages.desserts.push(data)
+                    break;
+            }
+        })
         })
     
 }
 
-export default getData;
+export { getData }
+export { pages }

@@ -1,10 +1,14 @@
 import Header from './header';
-import getData from './getdata';
+import MenuTiles from './menutiles';
+import { getData } from './getdata';
 
 function App() {
     getData();
     return (
+        <>
         <Header />
+        <MenuTiles />
+        </>
     )
 }
 
