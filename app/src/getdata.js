@@ -18,17 +18,14 @@ function getData() {
                 case "Appetizer":
                     if (pages.apps.length < 14) {
                     pages.apps.push(data) }
-                    console.log('pages.apps', pages.apps)
                     break;
                 case "Dinner":
                     if (pages.entrees.length < 31) {
                     pages.entrees.push(data) }
-                    console.log(pages.entrees)
                     break;
                 case "Dessert":
                     if (pages.desserts.length < 12) {
                     pages.desserts.push(data) }
-                    console.log(pages.desserts);
             }
         })
         })

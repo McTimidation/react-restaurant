@@ -4,7 +4,7 @@ import { ClickFunction } from './menu'
 
 
 function MenuTiles(props) {
-
+    
         return (
             <>
                 <button onClick={() => props.setPage('Appetizers')}>Apps</button>

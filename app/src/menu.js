@@ -3,9 +3,7 @@ import { pages } from './getdata';
 
 
 export function Menu(props) {
-
-
-
+    console.log(props)
     let Food;
     switch (props.page) {
         case 'Appetizers':
@@ -23,20 +21,28 @@ export function Menu(props) {
         default: 
             Food = null;
         
-    }
+    } console.log(Food)
+    let name = [];
     if (Food) {
-        Food.forEach(item =>{
+        Food.forEach(item => {
+            name.push(<li>{item.title} {item.price}<ul><li>{item.description}<br></br></li></ul></li>)
+            console.log(item)
+            console.log(item.title)
+            console.log(item.description)
+            console.log(item.price)
+            // let name = item.title
+            // let bio = item.description
+            // let price = item.price
+                
+            }); 
+
                 return (
+                
                     <ul>
-                        <li>{item.title}
-                            <ul>
-                                <li>{item.description}</li>
-                                <li>${item.price}</li>
-                            </ul>
-                        </li>
+                        {name}
                     </ul>
-                )
-            })
+                
+            ) 
     } else {
         return (
             null
