@@ -10,26 +10,31 @@ const pages = {
 
 
 
-async function getData() {
-    await axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
+function getData() {
+    axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
         .then((data) => {
-            // console.log(data.data[0].category.title)
             data.data.forEach(data => {
             switch (data.category.title) {
                 case "Appetizer":
-                    pages.apps.push(data)
+                    if (pages.apps.length < 14) {
+                    pages.apps.push(data) }
+                    console.log('pages.apps', pages.apps)
                     break;
                 case "Dinner":
-                    pages.entrees.push(data)
+                    if (pages.entrees.length < 31) {
+                    pages.entrees.push(data) }
+                    console.log(pages.entrees)
                     break;
                 case "Dessert":
-                    pages.desserts.push(data)
-                    break;
+                    if (pages.desserts.length < 12) {
+                    pages.desserts.push(data) }
+                    console.log(pages.desserts);
             }
         })
         })
     
+    
 }
 
-export { getData }
 export { pages }
+export { getData }

@@ -1,16 +1,19 @@
-import ClickFunction from './clickfunction';
-import { pages } from './getdata'
+import { useState } from "react";
+import { pages } from './getdata';
+import { ClickFunction } from './menu'
 
-function MenuTiles() {
-    // click function should be imported to this component
+
+function MenuTiles(props) {
+
         return (
             <>
-                <button onClick={ClickFunction(pages.apps)}>Apps</button>
+                <button onClick={() => props.setPage('Appetizers')}>Apps</button>
                 <button>Drinks</button>
-                <button onClick={ClickFunction(pages.entrees)}>Entrees</button>
-                <button onClick={ClickFunction(pages.desserts)}>Desserts</button>
+                <button onClick={() => props.setPage('Entrees')}>Entrees</button>
+                <button onClick={() => props.setPage('Desserts')}>Desserts</button>
             </>
                 )
+
     }
     export default MenuTiles
 
