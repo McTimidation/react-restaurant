@@ -25,7 +25,7 @@ export function Menu(props) {
     if (Food) {
         const menuItems = Food.map((item) =>
         
-            <li key={item.title.toString()}>{item.title} {item.price}
+            <li className='col-4' key={item.title.toString()}>{item.title} {item.price}
                 <ul><li key={item.title.toString()}>{item.description}</li></ul>
                     </li>
             )
@@ -38,7 +38,7 @@ export function Menu(props) {
             // let price = item.price
             return (
                 <div className="bg-dark card px-4 py-5">
-                    <ul className='text-white'>
+                    <ul className='text-white row'>
                         {menuItems}
                     </ul>
                 </div>
