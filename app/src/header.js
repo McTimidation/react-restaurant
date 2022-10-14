@@ -7,7 +7,9 @@ function Header() {
         <>
         
         <div className='image justify-content-center row align-items-end'>
-            <div id='logo' className='display-5 fw-bold'>Revolutionary Pour</div>
+            <div id='logo' className='display-4 fw-bold'>Revolutionary Pour
+                <div id='subHeading'>Here's to the Sons of Siperty</div>
+            </div>
         </div>
        </>
     )

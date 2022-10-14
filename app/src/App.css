@@ -19,7 +19,21 @@
     text-align: center;
     color:darkorange;
     text-shadow: 3px 3px 6px rgb(44, 1, 1);
-    
+    font-family: 'Old Standard TT', serif;
 }
 
-/* chocolate best so far */
+@media (max-width: 575.98px) {
+    .image {
+        position:relative;
+        top: 0px;
+    }
+}
+
+
+
+#subHeading {
+    font-size: calc(1.1rem + 1vw);
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
