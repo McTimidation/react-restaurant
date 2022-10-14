@@ -1,0 +1,21 @@
+.image {
+
+    background-image: url('https://i.imgur.com/tEm9uYV.png');
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.card {
+    border-radius: 0px;
+}
+
+
+#logo {
+    position:relative;
+    bottom: 0px;
+    text-align: center;
+}
+

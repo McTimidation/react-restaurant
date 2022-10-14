@@ -7,6 +7,7 @@ import Footer from './footer';
 
 
 
+
 function App() {
     const [ page, setPage ] = useState('Home')
 
