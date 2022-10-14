@@ -8,3 +8,14 @@
     position: relative;
 }
 
+.card {
+    border-radius: 0px;
+}
+
+
+#logo {
+    position:relative;
+    bottom: 0px;
+    text-align: center;
+}
+

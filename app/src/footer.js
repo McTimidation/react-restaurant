@@ -6,12 +6,12 @@ function Footer() {
     <div className="bg-dark container-fluid">
       <div className="text-white row">
         <div className="footer_contact col-lg-4">
-          <h3>Adress</h3>
-          <p>Restaurant 40 Park Ave, Brooklyn <br></br> Ukraine/Nikolaev</p>
+          <h3>Address</h3>
+          <p>348 E Main St, Lexington, KY</p>
         </div>
         <div className="footer_contact col-lg-4">
           <h3>Reservation</h3>
-          <p>+380 12 345 678 91 <br></br> Contact@mail.com</p>
+          <p>(502) 741-2817<br></br> Contact@mail.com</p>
         </div>
         <div className="footer_contact col-lg-4">
           <h3>Open hours</h3>
