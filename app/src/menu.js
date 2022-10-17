@@ -25,8 +25,8 @@ export function Menu(props) {
     if (Food) {
         const menuItems = Food.map((item) =>
         
-            <li className='col-4' key={item.title.toString()}>{item.title} {item.price}
-                <ul><li key={item.title.toString()}>{item.description}</li></ul>
+            <li className='col-6' key={item.title.toString()}><h4>{item.title}</h4> 
+                <ul><li key={item.title.toString()}>{item.description} <b>{item.price}</b></li></ul>
                     </li>
             )
             // console.log(item)
