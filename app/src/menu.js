@@ -3,7 +3,6 @@ import { pages } from './getdata';
 
 
 export function Menu(props) {
-    console.log(props)
     let Food;
     switch (props.page) {
         case 'Appetizers':
@@ -21,11 +20,11 @@ export function Menu(props) {
         default: 
             Food = null;
         
-    } console.log(Food)
+    }
     if (Food) {
         const menuItems = Food.map((item) =>
         
-            <li className='col-6' key={item.title.toString()}><h4>{item.title}</h4> 
+            <li className='col-6' key={item.id.toString()}><h4>{item.title}</h4> 
                 <ul><li key={item.title.toString()}>{item.description} <b>{item.price}</b></li></ul>
                     </li>
             )

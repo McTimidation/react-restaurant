@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { useEffect } from 'react';
 
 // call api to be stored in STATE. STATE object can be called and updated as user clicks different links
 const pages = { 
@@ -11,27 +12,23 @@ const pages = {
 
 
 function getData() {
-    axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
+    axios.get('https://8000-mctimidatio-backendbist-ykff0egyo4x.ws-us75.gitpod.io/menu_items/')
         .then((data) => {
             data.data.forEach(data => {
-            switch (data.category.title) {
-                case "Appetizer":
-                    if (pages.apps.length < 14) {
-                    pages.apps.push(data) }
+            switch (data.category_id) {
+                case 3:
+                    pages.apps.push(data)
                     break;
-                case "Dinner":
-                    if (pages.entrees.length < 31) {
-                    pages.entrees.push(data) }
+                case 2:
+                    pages.entrees.push(data) 
                     break;
-                case "Dessert":
-                    if (pages.desserts.length < 12) {
-                    pages.desserts.push(data) }
+                case 5:
+                    pages.desserts.push(data) 
+                    break;
             }
-        })
-        })
-    
-    
+        }
+    )
+    })
 }
-
 export { pages }
 export { getData }
