@@ -22,33 +22,32 @@ export function Menu(props) {
             Food = null;
         
     } console.log(Food)
-    let name = [];
     if (Food) {
-        Food.forEach(item => {
-            name.push(<li>{item.title} {item.price}<ul><li>{item.description}<br></br></li></ul></li>)
-            console.log(item)
-            console.log(item.title)
-            console.log(item.description)
-            console.log(item.price)
+        const menuItems = Food.map((item) =>
+        
+            <li className='col-6' key={item.title.toString()}><h4>{item.title}</h4> 
+                <ul><li key={item.title.toString()}>{item.description} <b>{item.price}</b></li></ul>
+                    </li>
+            )
+            // console.log(item)
+            // console.log(item.title)
+            // console.log(item.description)
+            // console.log(item.price)
             // let name = item.title
             // let bio = item.description
             // let price = item.price
-                
-            }); 
-
-                return (
-                
-                    <ul>
-                        {name}
+            return (
+                <div className="bg-dark card px-4 py-5">
+                    <ul className='text-white row'>
+                        {menuItems}
                     </ul>
-                
-            ) 
+                </div>
+        ) 
     } else {
         return (
             null
         )
     }
 }
-
 
 

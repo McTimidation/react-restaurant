@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { pages } from './getdata';
-import { ClickFunction } from './menu'
+import { ClickFunction } from './menu';
+
 
 
 function MenuTiles(props) {
     
         return (
-            <>
-                <button onClick={() => props.setPage('Appetizers')}>Apps</button>
-                <button>Drinks</button>
-                <button onClick={() => props.setPage('Entrees')}>Entrees</button>
-                <button onClick={() => props.setPage('Desserts')}>Desserts</button>
-            </>
+            <div className='bg-dark text-secondary px-4 py-5 text-center'>
+                <button className="btn btn-outline-light" onClick={() => props.setPage('Appetizers')}>Apps</button>
+                <button className="mx-4 btn btn-outline-light" onClick={() => props.setPage('Entrees')}>Entrees</button>
+                <button className="btn btn-outline-light" onClick={() => props.setPage('Desserts')}>Desserts</button>
+            </div>
                 )
 
     }

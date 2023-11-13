@@ -1,17 +1,17 @@
 import React from 'react';
 
 
-function Image() {
-    return (
-        <img alt="" src='https://i.imgur.com/tEm9uYV.png'></img>
-    )
-}
+
 function Header() {
     return(
         <>
-            <Image />
-            <h1>Revolutionary Pour</h1>
-        </>
+        
+        <div className='image justify-content-center row align-items-end'>
+            <div id='logo' className='display-4 fw-bold'>Revolutionary Pour
+                <div id='subHeading'>Here's to the Sons of Siperty</div>
+            </div>
+        </div>
+       </>
     )
 }
 
