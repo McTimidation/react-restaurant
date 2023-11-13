@@ -11,7 +11,7 @@ const pages = {
 
 
 function getData() {
-    axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
+    axios.get('https://www.jsonkeeper.com/b/MDXW')
         .then((data) => {
             data.data.forEach(data => {
             switch (data.category.title) {
