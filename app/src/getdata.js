@@ -14,17 +14,17 @@ function getData() {
     axios.get('https://www.jsonkeeper.com/b/MDXW')
         .then((data) => {
             data.data.forEach(data => {
-            switch (data.category.title) {
+            switch (data.category) {
                 case "Appetizer":
                     if (pages.apps.length < 14) {
                     pages.apps.push(data) }
                     break;
                 case "Dinner":
-                    if (pages.entrees.length < 31) {
+                    if (pages.entrees.length < 15) {
                     pages.entrees.push(data) }
                     break;
-                case "Dessert":
-                    if (pages.desserts.length < 12) {
+                case "Drink":
+                    if (pages.desserts.length < 3) {
                     pages.desserts.push(data) }
             }
         })
