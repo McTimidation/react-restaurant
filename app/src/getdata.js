@@ -11,6 +11,7 @@ const pages = {
 
 
 function getData() {
+    console.log("There is a CORS issue with this API, you can install an 'allow CORS' chrome extension to see the full menu")
     axios.get('https://www.jsonkeeper.com/b/MDXW')
         .then((data) => {
             data.data.forEach(data => {
